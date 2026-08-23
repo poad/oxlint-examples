@@ -1,0 +1,31 @@
+version: 2
+
+multi-ecosystem-groups:
+  default:
+    schedule:
+      interval: "daily"
+    assignees: ["poad"]
+    labels: ["dependencies"]
+
+updates:
+  - package-ecosystem: "github-actions"
+    directories:
+      - "/"
+    allow:
+      - dependency-type: all
+    rebase-strategy: auto
+    cooldown:
+      default-days: 7
+    patterns: ["*"]
+    multi-ecosystem-group: "default"
+
+  - package-ecosystem: "npm"
+    directories:
+      - "/**"
+    allow:
+      - dependency-type: all
+    rebase-strategy: auto
+    cooldown:
+      default-days: 7
+    patterns: ["*"]
+    multi-ecosystem-group: "default"

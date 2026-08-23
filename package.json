@@ -1,0 +1,29 @@
+{
+  "name": "oxlint-examples",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "pnpm run -r --parallel --if-present build",
+    "test": "pnpm run -r --parallel --if-present test",
+    "lint": "pnpm run -r --parallel --if-present lint",
+    "lint-fix": "pnpm run -r --parallel --if-present lint-fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.22.0",
+      "onFail": "download"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "^24.19.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {}
+}

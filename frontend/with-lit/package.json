@@ -1,0 +1,27 @@
+{
+  "name": "with-lit",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "oxlint:check": "oxlint",
+    "oxlint:fix": "oxlint --fix",
+    "oxfmt:fix": "oxfmt",
+    "oxfmt:check": "oxfmt --check",
+    "lint": "pnpm '/^.*:check$/'",
+    "lint-fix": "pnpm '/^.*:fix$/'"
+  },
+  "dependencies": {
+    "lit": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint-plugin-lit": "^2.3.1",
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
+  }
+}

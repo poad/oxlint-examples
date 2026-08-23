@@ -1,0 +1,36 @@
+{
+  "name": "aws-cdk-vitest",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "vitest --run",
+    "cdk": "cdk",
+    "oxlint:check": "oxlint",
+    "oxlint:fix": "oxlint --fix",
+    "oxfmt:fix": "oxfmt",
+    "oxfmt:check": "oxfmt --check",
+    "lint": "pnpm '/^.*:check$/'",
+    "lint-fix": "pnpm '/^.*:fix$/'"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.265.0",
+    "constructs": "^10.8.1"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.16.0",
+    "@swc/jest": "^0.2.39",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.13.3",
+    "aws-cdk": "2.1136.0",
+    "jest": "^30.4.2",
+    "oxfmt": "^0.63.0",
+    "oxlint": "^1.79.0",
+    "oxlint-plugin-awscdk": "^1.0.0",
+    "tsx": "^4.23.12",
+    "typescript": "~7.0.2",
+    "vite": "^8.2.1",
+    "vitest": "^4.1.10"
+  }
+}

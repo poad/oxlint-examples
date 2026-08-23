@@ -1,0 +1,36 @@
+name: Build and Test
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+    - main
+
+  workflow_dispatch: 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      with:
+        persist-credentials: false
+
+    - name: Install pnpm
+      uses: pnpm/setup@v2
+      with:
+        install: false
+
+    - name: Install dependencies
+      run: pnpm install --no-frozen-lockfile
+
+    - name: Lint
+      run: pnpm -r --parallel --if-present lint
+
+    - name: Build
+      run: pnpm -r --parallel --if-present build
+
+    - name: Test
+      run: pnpm -r --parallel --if-present test
+

@@ -1,0 +1,23 @@
+{
+  "name": "@oxlint-examples-non-frontend/without-vitest",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "oxlint:check": "oxlint",
+    "oxlint:fix": "oxlint --fix",
+    "oxfmt:fix": "oxfmt",
+    "oxfmt:check": "oxfmt --check",
+    "lint": "pnpm '/^.*:check$/'",
+    "lint-fix": "pnpm '/^.*:fix$/'"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "oxfmt": "^0.63.0",
+    "oxlint": "^1.79.0",
+    "oxlint-plugin-awscdk": "^1.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1",
+    "vitest": "^4.1.10"
+  }
+}
