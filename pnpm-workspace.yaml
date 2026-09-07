@@ -1,9 +1,10 @@
 packages:
-  - ./non-frontend/**
-  - ./frontend/**
-  - ./aws-cdk/**
+  - non-frontend/**
+  - frontend/**
+  - aws-cdk/**
 
 allowBuilds:
+  '@parcel/watcher': false
   '@swc/core': false
   esbuild: false
   sharp: false
