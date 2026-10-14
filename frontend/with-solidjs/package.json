@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@solidjs/router": "^1.0.0",
-    "solid-js": "^1.9.15"
+    "solid-js": "^1.9.17"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
@@ -27,7 +27,7 @@
     "postcss": "^8.5.29",
     "solid-devtools": "^0.34.5",
     "tailwindcss": "^4.3.3",
-    "vite": "^8.3.2",
+    "vite": "^8.3.3",
     "vite-plugin-pages": "^0.33.3",
     "vite-plugin-solid": "^2.11.14"
   }
