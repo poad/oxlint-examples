@@ -21,13 +21,13 @@
     "solid-js": "^1.9.18"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.3.4",
-    "oxfmt": "^0.76.0",
-    "oxlint": "^1.91.0",
+    "@tailwindcss/postcss": "^4.3.5",
+    "oxfmt": "^0.77.0",
+    "oxlint": "^1.92.0",
     "postcss": "^8.5.32",
     "solid-devtools": "^0.34.5",
-    "tailwindcss": "^4.3.4",
-    "vite": "^8.3.5",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.6",
     "vite-plugin-pages": "^0.33.3",
     "vite-plugin-solid": "^2.11.15"
   }
