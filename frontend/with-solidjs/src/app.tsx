@@ -1,5 +1,5 @@
-import { A, useLocation } from '@solidjs/router';
-import { Suspense, type Component } from 'solid-js';
+import { useLocation } from '@solidjs/router';
+import { Loading, type Component, type Element } from 'solid-js';
 
 const App: Component<{ children: Element }> = (props) => {
   const location = useLocation();
@@ -9,19 +9,19 @@ const App: Component<{ children: Element }> = (props) => {
       <nav class="bg-gray-200 text-gray-900 px-4">
         <ul class="flex items-center">
           <li class="py-2 px-4">
-            <A href="/" class="no-underline hover:underline">
+            <a href="/" class="no-underline hover:underline">
               Home
-            </A>
+            </a>
           </li>
           <li class="py-2 px-4">
-            <A href="/about" class="no-underline hover:underline">
+            <a href="/about" class="no-underline hover:underline">
               About
-            </A>
+            </a>
           </li>
           <li class="py-2 px-4">
-            <A href="/error" class="no-underline hover:underline">
+            <a href="/error" class="no-underline hover:underline">
               Error
-            </A>
+            </a>
           </li>
 
           <li class="text-sm flex items-center space-x-1 ml-auto">
@@ -29,7 +29,7 @@ const App: Component<{ children: Element }> = (props) => {
             <input
               class="w-75px p-1 bg-white text-sm rounded-lg"
               type="text"
-              readOnly
+              readonly
               value={location.pathname}
             />
           </li>
@@ -37,7 +37,7 @@ const App: Component<{ children: Element }> = (props) => {
       </nav>
 
       <main>
-        <Suspense>{props.children}</Suspense>
+        <Loading fallback={<p>Loading...</p>}>{props.children}</Loading>
       </main>
     </>
   );
