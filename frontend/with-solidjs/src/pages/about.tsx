@@ -1,13 +1,16 @@
-import { createEffect, Suspense } from 'solid-js';
+import { createEffect, Loading } from 'solid-js';
 
-import AboutData from './about.data';
+import AboutData from './about.data.js';
 
 export default function About() {
   const name = AboutData();
 
-  createEffect(() => {
-    console.log(name());
-  });
+  createEffect(
+    () => name(),
+    (value) => {
+      console.log(value);
+    },
+  );
 
   return (
     <section class="bg-pink-100 text-gray-700 p-8">
@@ -17,9 +20,9 @@ export default function About() {
 
       <p>
         <span>We love</span>
-        <Suspense fallback={<span>...</span>}>
+        <Loading fallback={<span>...</span>}>
           <span>&nbsp;{name()}</span>
-        </Suspense>
+        </Loading>
       </p>
     </section>
   );

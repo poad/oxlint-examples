@@ -1,12 +1,16 @@
-/* @refresh reload */
-
-import 'solid-devtools';
 import './index.css';
-import { Router } from '@solidjs/router';
-import { render } from 'solid-js/web';
-import routes from '~solid-pages';
+import { createRouter } from '@solidjs/router';
+import { render } from '@solidjs/web';
+import { lazy, Loading } from 'solid-js';
 
 import App from './app';
+
+const Router = createRouter({
+  routes: [
+    { path: '/', component: lazy(() => import('./pages/index.jsx')) },
+    { path: '/about', component: lazy(() => import('./pages/about.jsx')) },
+  ],
+});
 
 const root = document.getElementById('root');
 
@@ -16,7 +20,13 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-render(
-  () => <Router root={(props) => <App>{props.children}</App>}>{routes}</Router>,
-  root,
-);
+if (root) {
+  render(
+    () => (
+      <Loading fallback={<p>Loading...</p>}>
+        <Router>{(props) => <App>{props.children}</App>}</Router>
+      </Loading>
+    ),
+    root,
+  );
+}

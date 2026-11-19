@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # oxlint-examples
 
 A collection of oxlint configuration examples for various TypeScript/JavaScript projects and frameworks.

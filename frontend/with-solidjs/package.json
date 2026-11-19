@@ -17,18 +17,17 @@
     "lint-fix": "pnpm '/^.*:fix$/'"
   },
   "dependencies": {
-    "@solidjs/router": "^1.0.1",
-    "solid-js": "^1.9.18"
+    "@solidjs/router": "^2.0.0",
+    "@solidjs/web": "^2.0.3",
+    "solid-js": "^2.0.3"
   },
   "devDependencies": {
+    "@solidjs/vite-plugin": "^3.0.1",
     "@tailwindcss/postcss": "^4.3.5",
     "oxfmt": "^0.77.0",
     "oxlint": "^1.92.0",
     "postcss": "^8.5.32",
-    "solid-devtools": "^0.34.5",
     "tailwindcss": "^4.3.5",
-    "vite": "^8.3.6",
-    "vite-plugin-pages": "^0.33.3",
-    "vite-plugin-solid": "^2.11.15"
+    "vite": "^8.3.6"
   }
 }
