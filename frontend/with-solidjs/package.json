@@ -24,10 +24,10 @@
   "devDependencies": {
     "@solidjs/vite-plugin": "^3.0.1",
     "@tailwindcss/postcss": "^4.3.5",
-    "oxfmt": "^0.77.0",
-    "oxlint": "^1.92.0",
-    "postcss": "^8.5.32",
+    "oxfmt": "^0.78.0",
+    "oxlint": "^1.93.0",
+    "postcss": "^8.5.33",
     "tailwindcss": "^4.3.5",
-    "vite": "^8.3.6"
+    "vite": "^8.3.8"
   }
 }
